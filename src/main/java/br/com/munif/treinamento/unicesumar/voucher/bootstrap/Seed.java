@@ -11,7 +11,9 @@ import br.com.munif.framework.vicente.core.RightsHelper;
 import br.com.munif.framework.vicente.core.VicThreadScope;
 import br.com.munif.framework.vicente.security.seed.SeedSecurity;
 import br.com.munif.treinamento.unicesumar.voucher.entidades.Aluno;
-import br.com.munif.treinamento.unicesumar.voucher.repositorios.AlunoRepository;
+import br.com.munif.treinamento.unicesumar.voucher.entidades.Polo;
+import br.com.munif.treinamento.unicesumar.voucher.repositorios.*;
+
 
 @Component
 public class Seed implements ApplicationListener<ContextRefreshedEvent> {
@@ -23,7 +25,25 @@ public class Seed implements ApplicationListener<ContextRefreshedEvent> {
 
 	@Autowired
 	private AlunoRepository alunoRepository;
+	
+	@Autowired
+	private PoloRepository poloRepository;
+	
+	@Autowired
+	private ConcursoRepository concursoRepository;
 
+
+	@Autowired
+	private CampanhaVoucherRepository campanhaVoucherRepository;
+	
+	@Autowired
+	private VoucherRepository voucherRepository;
+	
+	@Autowired
+	private CandidatoRepository candidatoRepository;
+	
+
+	
 	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		VicThreadScope.gi.set("SEED");
@@ -40,8 +60,15 @@ public class Seed implements ApplicationListener<ContextRefreshedEvent> {
 	}
 
 	private void seedAluno() {
-		alunoRepository.save(new Aluno("1", "Fulano", "123456789-01", "Sistemas"));
-		alunoRepository.save(new Aluno("2", "Fulana", "123456780-02", "Sistemas"));
+		Aluno aluno1 = alunoRepository.save(new Aluno("1", "Fulano", "123456789-01", "Sistemas"));
+		Aluno aluno2 = alunoRepository.save(new Aluno("2", "Fulana", "123456780-02", "Sistemas"));
+		
+		Polo polo1 = poloRepository.save(new Polo("Maringá"));
+		Polo polo2 = poloRepository.save(new Polo("Londrina"));
+		Polo polo3 = poloRepository.save(new Polo("Curitiba"));
+		
+		
+		
 	}
 
 }
