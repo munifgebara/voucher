@@ -11,9 +11,9 @@ import br.com.munif.framework.vicente.domain.BaseEntity;
 public class Polo extends BaseEntity {
 
 	private String nome;
-	
+
 	public Polo() {
-		
+
 	}
 
 	public Polo(String nome) {

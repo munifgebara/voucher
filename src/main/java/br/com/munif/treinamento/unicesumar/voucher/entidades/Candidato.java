@@ -21,9 +21,9 @@ public class Candidato extends BaseEntity {
 	private Boolean pago;
 	@ManyToOne
 	private Concurso concurso;
-	
+
 	public Candidato() {
-		
+
 	}
 
 	public Candidato(String nomeCompleto, String cpf, String curso, Polo polo, Voucher voucher, Boolean pago,

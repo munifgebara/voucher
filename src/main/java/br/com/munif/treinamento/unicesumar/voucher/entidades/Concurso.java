@@ -12,9 +12,9 @@ public class Concurso extends BaseEntity {
 
 	private Integer ano;
 	private Integer semestre;
-	
+
 	public Concurso() {
-		
+
 	}
 
 	public Concurso(Integer ano, Integer semestre) {

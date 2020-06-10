@@ -17,9 +17,9 @@ public class CampanhaVoucher extends BaseEntity {
 	private Set<Concurso> concursoLiberados;
 	@OneToMany
 	private Set<Polo> polosLiberados;
-	
+
 	public CampanhaVoucher() {
-		
+
 	}
 
 	public CampanhaVoucher(String codigoCampanha, Set<Concurso> concursoLiberados, Set<Polo> polosLiberados) {

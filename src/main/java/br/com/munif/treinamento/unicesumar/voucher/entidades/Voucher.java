@@ -16,9 +16,9 @@ public class Voucher extends BaseEntity {
 	private Aluno indicador;
 	@ManyToOne
 	private CampanhaVoucher campanhaVoucher;
-	
+
 	public Voucher() {
-		
+
 	}
 
 	public Voucher(String codigoVoucher, Aluno indicador, CampanhaVoucher campanhaVoucher) {

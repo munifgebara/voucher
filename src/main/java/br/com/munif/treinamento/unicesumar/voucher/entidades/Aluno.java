@@ -14,9 +14,9 @@ public class Aluno extends BaseEntity {
 	private String nomeCompleto;
 	private String cpf;
 	private String curso;
-	
+
 	public Aluno() {
-		
+
 	}
 
 	public Aluno(String ra, String nomeCompleto, String cpf, String curso) {
